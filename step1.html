@@ -1,0 +1,33 @@
+<div class="container">
+
+    <h2>Шаг 1</h2>
+
+    <div class="col-md-6">
+        <div class="well">
+            <h3>Выберите регион</h3>
+            <select ng-model="selected" ng-options="item.name for item in oblasti track by item.temp"></select>
+        </div>
+        <div class="well">
+            <p>Средняя температура отопительного периода - <span class="alert-danger">{{selected.temp}}</span><span> &#8451</span></p>
+        </div>
+        <div class="well">
+            <p>Продолжительность отопительного периода - <span class="alert-success">{{selected.period}}</span> суток</p>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="mainBlockMap">
+            <img src="img/belarus.jpg" usemap="#belarusMap">
+            <img ng-repeat="items in fotoMaps" src={{items.url}}>
+        </div>
+
+        <map id="map" name="belarusMap">
+            <area shape="poly" alt="brest" title="brest" coords="78,229,78,214,79,214,78,211,79,206,81,204,79,198,73,181,82,175,87,174,91,169,92,166,97,165,100,168,103,166,110,168,111,163,116,156,121,156,126,162,131,163,134,165,135,161,142,154,142,146,146,141,147,138,154,138,167,141,167,145,164,147,165,151,171,153,168,157,170,161,169,166,172,164,175,164,180,171,184,170,186,177,185,181,193,192,200,195,200,204,202,208,198,214,201,220,198,222,200,229,192,229,191,225,189,221,171,217,165,214,161,216,154,213,125,208,117,212,103,211,100,218,91,226,82,223,79,226,78,225" href="img/brest.jpg" target="" />
+            <area shape="poly" alt="grodno" title="grodno" coords="93,167,101,108,109,113,117,106,120,110,122,107,122,101,131,99,140,93,144,102,151,99,143,90,151,79,151,68,157,61,164,59,167,68,173,75,176,81,173,87,169,94,158,98,162,107,165,107,168,113,162,117,171,129,170,134,172,137,168,140,148,138,135,163,128,163,121,158,112,159,112,167,93,166" href="img/grodno.jpg" target="" />
+        </map>
+<!--        <ul>
+            <li ng-repeat="itemFoto in fotoMaps"><img src={{itemFoto.grodno}}></li>
+        </ul>-->
+</div>
+
+</div>

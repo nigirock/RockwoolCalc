@@ -1,0 +1,23 @@
+{
+  "city":
+  [
+    {
+    "url": "./img/brest.jpg"
+    } ,
+    {
+    "url": "./img/grodno.jpg"
+    } ,
+    {
+    "url": "./img/mogilev.jpg"
+    } ,
+    {
+    "url": "./img/vitebsk.jpg"
+    } ,
+    {
+    "url": "./img/gomel.jpg"
+    } ,
+    {
+    "url": "./img/minsk.jpg"
+    }
+  ]
+}
