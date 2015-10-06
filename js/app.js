@@ -4,11 +4,14 @@ app.controller('mainCtrl',function($scope,$http){
         $scope.fotoMaps = data.city;
         console.log($scope.fotoMaps.city);
     });
+    $scope.mainImgMapVisible = true;
+
     $scope.oblasti = [
         {
-           name:"Минская",
-           temp: -1.6,
-           period: 202
+            name:"Минская",
+            temp: -1.6,
+            period: 202,
+            visible: true
         },
         {
             name:"Брестская",
@@ -18,24 +21,40 @@ app.controller('mainCtrl',function($scope,$http){
         {
             name:"Гродненская",
             temp: -0.5,
-            period: 194
+            period: 196,
+            visible: true
         },
         {
             name:"Витебская",
-            temp: -2,
-            period: 207
+            temp: -2.1,
+            period: 207,
+            visible: true
         },
         {
             name:"Магилевская",
             temp: -1.9,
-            period: 204
+            period: 204,
+            visible: true
         },
         {
             name:"Гомельская",
             temp: -1.6,
-            period: 194
+            period: 194,
+            visible: true
     }];
     $scope.selected= $scope.oblasti[0];
+
+    $scope.hoverMap = function(title){
+        switch (title){
+            case  "brest":
+                $scope.mainImgMapVisible = false;
+                $scope.fotoMaps[0].visible = true;
+                break;
+            case "grodno":
+                console.log("grodno");
+                break
+        }
+    };
 
 
 });

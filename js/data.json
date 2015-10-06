@@ -2,7 +2,8 @@
   "city":
   [
     {
-    "url": "./img/brest.jpg"
+      "url": "./img/brest.jpg",
+      "visible" : false
     } ,
     {
     "url": "./img/grodno.jpg"
