@@ -51,10 +51,19 @@ app.controller('mainCtrl',function($scope,$http){
                 $scope.fotoMaps[0].visible = true;
                 break;
             case "grodno":
-                console.log("grodno");
                 break
         }
     };
+    $scope.leaveMap = function(title){
+        switch (title){
+            case  "brest":
+                $scope.mainImgMapVisible = true;
+                $scope.fotoMaps[0].visible = false;
+                break;
+            case "grodno":
+                break
+        }
+    }
 
 
 });
