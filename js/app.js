@@ -31,7 +31,7 @@ app.controller('mainCtrl',function($scope,$http){
             visible: true
         },
         {
-            name:"Магилевская",
+            name:"Могилевская",
             temp: -1.9,
             period: 204,
             visible: true
