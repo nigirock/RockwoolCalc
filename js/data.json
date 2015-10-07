@@ -3,22 +3,28 @@
   [
     {
       "url": "./img/brest.jpg",
-      "visible" : false
+      "visible" : false,
+      "key": "brest"
     } ,
     {
-    "url": "./img/grodno.jpg"
+    "url": "./img/grodno.jpg",
+      "key": "grodno"
     } ,
     {
-    "url": "./img/mogilev.jpg"
+    "url": "./img/mogilev.jpg",
+      "key": "mogilev"
     } ,
     {
-    "url": "./img/vitebsk.jpg"
+    "url": "./img/vitebsk.jpg",
+      "key": "vitebsk"
     } ,
     {
-    "url": "./img/gomel.jpg"
+    "url": "./img/gomel.jpg",
+      "key": "gomel"
     } ,
     {
-    "url": "./img/minsk.jpg"
+    "url": "./img/minsk.jpg",
+      "key": "minsk"
     }
   ]
 }

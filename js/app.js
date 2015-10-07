@@ -1,5 +1,5 @@
 var app = angular.module("app",['ngRoute']);
-app.controller('mainCtrl',function($scope,$http){
+app.controller('mainCtrl', function($scope, $http){
     $http.get("./js/data.json").success(function(data){
         $scope.fotoMaps = data.city;
         console.log($scope.fotoMaps.city);
@@ -44,24 +44,26 @@ app.controller('mainCtrl',function($scope,$http){
     }];
     $scope.selected= $scope.oblasti[0];
 
-    $scope.hoverMap = function(title){
-        switch (title){
-            case  "brest":
-                $scope.mainImgMapVisible = false;
-                $scope.fotoMaps[0].visible = true;
-                break;
-            case "grodno":
-                break
+    var getPhoto = function(key) {
+        for(var i = 0; i < $scope.fotoMaps.length; i++) {
+            if ($scope.fotoMaps[i].key === key) {
+                return $scope.fotoMaps[i];
+            }
         }
     };
-    $scope.leaveMap = function(title){
-        switch (title){
-            case  "brest":
-                $scope.mainImgMapVisible = true;
-                $scope.fotoMaps[0].visible = false;
-                break;
-            case "grodno":
-                break
+
+    $scope.hoverMap = function(key){
+        $scope.mainImgMapVisible = false;
+        var photo = getPhoto(key);
+        if (photo) {
+            photo.visible = true;
+        }
+    };
+    $scope.leaveMap = function(key){
+        $scope.mainImgMapVisible = true;
+        var photo = getPhoto(key);
+        if (photo) {
+            photo.visible = false;
         }
     }
 
