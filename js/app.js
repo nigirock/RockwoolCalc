@@ -1,53 +1,17 @@
 var app = angular.module("app",['ngRoute']);
 app.controller('mainCtrl', function($scope, $http){
     $http.get("./js/data.json").success(function(data){
-        $scope.fotoMaps = data.city;
-        console.log($scope.fotoMaps.city);
+        $scope.oblastiMaps = data.city;
+        $scope.minsk = $scope.oblastiMaps[0];
+        $scope.selected = $scope.minsk;
+        console.log($scope.oblastiMaps[1].name)
     });
     $scope.mainImgMapVisible = true;
 
-    $scope.oblasti = [
-        {
-            name:"Минская",
-            temp: -1.6,
-            period: 202,
-            visible: true
-        },
-        {
-            name:"Брестская",
-            temp: 0.2,
-            period: 187
-        },
-        {
-            name:"Гродненская",
-            temp: -0.5,
-            period: 196,
-            visible: true
-        },
-        {
-            name:"Витебская",
-            temp: -2.1,
-            period: 207,
-            visible: true
-        },
-        {
-            name:"Могилевская",
-            temp: -1.9,
-            period: 204,
-            visible: true
-        },
-        {
-            name:"Гомельская",
-            temp: -1.6,
-            period: 194,
-            visible: true
-    }];
-    $scope.selected= $scope.oblasti[0];
-
     var getPhoto = function(key) {
-        for(var i = 0; i < $scope.fotoMaps.length; i++) {
-            if ($scope.fotoMaps[i].key === key) {
-                return $scope.fotoMaps[i];
+        for(var i = 0; i < $scope.oblastiMaps.length; i++) {
+            if ($scope.oblastiMaps[i].key === key) {
+                return $scope.oblastiMaps[i];
             }
         }
     };
@@ -65,8 +29,29 @@ app.controller('mainCtrl', function($scope, $http){
         if (photo) {
             photo.visible = false;
         }
-    }
-
+    };
+    $scope.clickSelected = function(key){
+        switch (key){
+            case "minsk":
+                $scope.selected = $scope.oblastiMaps[0];
+                break;
+            case "brest":
+                $scope.selected = $scope.oblastiMaps[1];
+                break;
+            case "grodno":
+                $scope.selected = $scope.oblastiMaps[2];
+                break;
+            case "mogilev":
+                $scope.selected = $scope.oblastiMaps[3];
+                break;
+            case "vitebsk":
+                $scope.selected = $scope.oblastiMaps[4];
+                break;
+            case "gomel":
+                $scope.selected = $scope.oblastiMaps[5];
+                break;
+        }
+    };
 
 });
 app.config(function($routeProvider, $locationProvider){
