@@ -1,5 +1,5 @@
 var app = angular.module("app",['ngRoute']);
-app.controller('mainCtrl', function($scope, $http){
+app.controller('mainCtrl', function($scope, $http, $location){
     $http.get("./js/data.json").success(function(data){
         $scope.oblastiMaps = data.city;
         $scope.minsk = $scope.oblastiMaps[0];
@@ -38,13 +38,16 @@ app.controller('mainCtrl', function($scope, $http){
             }
         }
     };
+    $scope.nextPage = function(){
+      $location.path("/step2.html");
+    };
 });
 app.config(function($routeProvider, $locationProvider){
    $locationProvider.html5Mode(true);
     $routeProvider.when('/index.html',{
         templateUrl:"/RockwoolCalc/step1.html"
     });
-    $routeProvider.when('/step2',{
+    $routeProvider.when('/step2.html',{
         templateUrl:"/RockwoolCalc/step2.html"
     })
 });
