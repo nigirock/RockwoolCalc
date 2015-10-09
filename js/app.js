@@ -30,29 +30,14 @@ app.controller('mainCtrl', function($scope, $http){
             photo.visible = false;
         }
     };
+
     $scope.clickSelected = function(key){
-        switch (key){
-            case "minsk":
-                $scope.selected = $scope.oblastiMaps[0];
-                break;
-            case "brest":
-                $scope.selected = $scope.oblastiMaps[1];
-                break;
-            case "grodno":
-                $scope.selected = $scope.oblastiMaps[2];
-                break;
-            case "mogilev":
-                $scope.selected = $scope.oblastiMaps[3];
-                break;
-            case "vitebsk":
-                $scope.selected = $scope.oblastiMaps[4];
-                break;
-            case "gomel":
-                $scope.selected = $scope.oblastiMaps[5];
-                break;
+        for(var i=0; i < $scope.oblastiMaps.length;i++){
+            if($scope.oblastiMaps[i].key === key){
+                $scope.selected = $scope.oblastiMaps[i];
+            }
         }
     };
-
 });
 app.config(function($routeProvider, $locationProvider){
    $locationProvider.html5Mode(true);
