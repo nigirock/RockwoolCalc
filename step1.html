@@ -1,11 +1,10 @@
 <div class="container">
 
     <h2>Шаг 1</h2>
-
     <div class="col-md-6">
         <div class="well">
             <h3>Выберите регион</h3>
-            <select ng-model="selected" ng-options="item.name for item in oblastiMaps track by item.period" ng-options="item.name for item in oblastiMaps track by item.temp"></select>
+            <select ng-model="selected" ng-options="item.name for item in oblastiMaps track by item.period" ng-options="item.name for item in oblastiMaps track by item.temp" ></select>
         </div>
         <div class="well">
             <p>Средняя температура отопительного периода - <span class="alert-danger">{{selected.temp}}</span><span> &#8451</span></p>
@@ -21,7 +20,7 @@
     <div class="col-md-6">
         <div class="mainBlockMap">
             <img ng-src="img/belarus.jpg" usemap="#belarusMap" ng-show="mainImgMapVisible" />
-            <img ng-repeat="items in oblastiMaps" usemap="#hoveredBelarusMap" ng-src={{items.url}} ng-show="items.visible" />
+            <img ng-repeat="items in oblastiMaps" usemap="#hoveredBelarusMap" ng-src={{items.url}} ng-show="items.visible"  />
         </div>
 
         <map id="map" name="belarusMap">
@@ -29,7 +28,7 @@
         </map>
 
         <map name="hoveredBelarusMap">
-            <area shape="poly" ng-mouseleave=leaveMap(item.key) alt={{item.key}} ng-click=clickSelected(item.key) title={{item.key}} coords={{item.coords}} ng-repeat="item in oblastiMaps">
+            <area shape="poly" ng-mouseleave=leaveMap(item.key) alt={{item.key}} ng-click=clickSelected(item.key) title={{item.key}} coords={{item.coords}} ng-repeat="item in oblastiMaps" >
         </map>
 
 </div>

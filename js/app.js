@@ -1,11 +1,13 @@
-var app = angular.module("app",['ngRoute']);
-app.controller('mainCtrl', function($scope, $http, $location){
+var app = angular.module("app",['ngRoute','ui.slider']);
+app.controller('mainCtrl', function($scope, $http, $location,$rootScope){
     $http.get("./js/data.json").success(function(data){
         $scope.oblastiMaps = data.city;
-        $scope.minsk = $scope.oblastiMaps[0];
-        $scope.selected = $scope.minsk;
-        console.log($scope.oblastiMaps[1].name)
+        $scope.buildingData = data.building;
+        $scope.sliderData = data.sliders;
+        $scope.selected = $scope.oblastiMaps[0];
+
     });
+
     $scope.mainImgMapVisible = true;
 
     var getPhoto = function(key) {
@@ -30,7 +32,6 @@ app.controller('mainCtrl', function($scope, $http, $location){
             photo.visible = false;
         }
     };
-
     $scope.clickSelected = function(key){
         for(var i=0; i < $scope.oblastiMaps.length;i++){
             if($scope.oblastiMaps[i].key === key){
@@ -41,7 +42,23 @@ app.controller('mainCtrl', function($scope, $http, $location){
     $scope.nextPage = function(){
       $location.path("/step2.html");
     };
+
+
 });
+
+app.controller("step2Ctrl",function($scope){
+    $scope.selectBuild = $scope.buildingData[0];
+    $scope.selectBuilding = $scope.buildingData;
+/*    $scope.demoVals = {
+        val1 : 4,
+        val2 : 1,
+        val3 : 7,
+        val4 : 7,
+        val5 : 2.5
+    }*/
+});
+
+
 app.config(function($routeProvider, $locationProvider){
    $locationProvider.html5Mode(true);
     $routeProvider.when('/index.html',{

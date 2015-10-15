@@ -6,12 +6,26 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
-    <script src="js/angular.js"></script>
-    <script src="js/routeProvider.js"></script>
     <script src="js/app.js"></script>
     <script src="js/step2.js"></script>
 </head>
-<div>
-    <div id="slider"></div>
-    <h2>step2</h2>
+<div id="step2" class="container" ng-controller="step2Ctrl">
+    <h2>Шаг 2</h2>
+    <div class="slide_block well col-md-6">
+        <div class="panel panel-primary input-group col-md-12">
+            <span class="col-md-6 input-group-addon">Тип здания</span>
+            <select ng-model="selectBuild" ng-options="item for item in buildingData" class="col-md-6"></select>
+        </div>
+            <div class="panel panel-primary input-group col-md-12" ng-repeat="item in sliderData">
+                    <span class="input-group-addon">{{item.text}}</span>
+                    <input type="text" ng-model="demoVals.val"/> м
+                <div ui-slider min={{item.min}} max={{item.max}} step={{item.step}} use-decimals ng-model="demoVals.val" class="form-control">
+                    <span class="firstValue">{{item.min}}</span>
+                    <span class="secondValue">{{item.max}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+    </div>
 </div>
