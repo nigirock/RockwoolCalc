@@ -18,8 +18,8 @@
         </div>
             <div class="panel panel-primary input-group col-md-12" ng-repeat="item in sliderData">
                     <span class="input-group-addon">{{item.text}}</span>
-                    <input type="text" ng-model="demoVals.val"/> м
-                <div ui-slider min={{item.min}} max={{item.max}} step={{item.step}} use-decimals ng-model="demoVals.val" class="form-control">
+                    <input type="text" ng-model="demoVals[$index]"/> м
+                <div ui-slider min={{item.min}} max={{item.max}} step={{item.step}} use-decimals ng-model="demoVals[$index]" class="form-control">
                     <span class="firstValue">{{item.min}}</span>
                     <span class="secondValue">{{item.max}}</span>
                 </div>

@@ -49,13 +49,8 @@ app.controller('mainCtrl', function($scope, $http, $location,$rootScope){
 app.controller("step2Ctrl",function($scope){
     $scope.selectBuild = $scope.buildingData[0];
     $scope.selectBuilding = $scope.buildingData;
-/*    $scope.demoVals = {
-        val1 : 4,
-        val2 : 1,
-        val3 : 7,
-        val4 : 7,
-        val5 : 2.5
-    }*/
+    $scope.demoVals = [4,1,7,7,2.5]
+
 });
 
 
