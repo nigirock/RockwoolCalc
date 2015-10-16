@@ -5,7 +5,6 @@ app.controller('mainCtrl', function($scope, $http, $location,$rootScope){
         $scope.buildingData = data.building;
         $scope.sliderData = data.sliders;
         $scope.selected = $scope.oblastiMaps[0];
-
     });
 
     $scope.mainImgMapVisible = true;
@@ -17,7 +16,6 @@ app.controller('mainCtrl', function($scope, $http, $location,$rootScope){
             }
         }
     };
-
     $scope.hoverMap = function(key){
         $scope.mainImgMapVisible = false;
         var photo = getPhoto(key);
@@ -42,15 +40,13 @@ app.controller('mainCtrl', function($scope, $http, $location,$rootScope){
     $scope.nextPage = function(){
       $location.path("/step2.html");
     };
-
-
 });
-
 app.controller("step2Ctrl",function($scope){
     $scope.selectBuild = $scope.buildingData[0];
-    $scope.selectBuilding = $scope.buildingData;
-    $scope.demoVals = [4,1,7,7,2.5]
-
+    $scope.demoVals = [];
+        for(var i=0; i < $scope.sliderData.length;i++){
+                $scope.demoVals.push($scope.sliderData[i].value);
+    };
 });
 
 

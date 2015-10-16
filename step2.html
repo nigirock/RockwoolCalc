@@ -6,11 +6,13 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
+    <script src="js/angular.js"></script>
     <script src="js/app.js"></script>
     <script src="js/step2.js"></script>
 </head>
-<div id="step2" class="container" ng-controller="step2Ctrl">
+<div class="container" ng-controller="step2Ctrl">
     <h2>Шаг 2</h2>
+
     <div class="slide_block well col-md-6">
         <div class="panel panel-primary input-group col-md-12">
             <span class="col-md-6 input-group-addon">Тип здания</span>
@@ -24,8 +26,25 @@
                     <span class="secondValue">{{item.max}}</span>
                 </div>
             </div>
+    </div>
+
+    <div class="col-md-6 well">
+        <div class="left_house col-md-6">
+            <span class="span_funnel"></span>
+            <span class="span_roof_xsmall"></span>
+            <span class="span_bg_roof_border"></span>
+            <span class="span_balcony_front"></span>
+            <span class="span_bg_wall_left"></span>
+            <span class="span_door"></span>
+            <span class="span_window"></span>
+            <span class="span_window_big"></span>
+            <span class="span_bg_wall_right"></span>
+            <span class="span_bg_wall_right span_bg_wall_right1"></span>
+            <span class="span_bg_wall_right span_bg_wall_right2"></span>
+            <span class="span_bg_lining"></span>
+            <span class="span_bg_brick"></span>
         </div>
+
     </div>
-    <div class="col-md-6">
-    </div>
+
 </div>
