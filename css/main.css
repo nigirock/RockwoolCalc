@@ -42,81 +42,81 @@
 .left_house span{
     position: absolute;
 }
-.span_funnel{
-    width: 7px;
-    height: 5px;
-    left: 92px;
-    top: -4px;
-    background: url("../img/funnel.png");
-}
-.span_roof_xsmall{
-    width: 161px;
-    height: 17px;
-    background: url("../img/roof-xsmall.png");
-}
-.span_bg_roof_border{
-    height: 4px;
-    top: 17px;
-    width: 161px;
-    background: url("../img/bg-roof-border.png") repeat-x;
-}
-.span_balcony_front{
-    display: none;
-    width: 35px;
-    height: 25px;
-    background: url("../img/balcony-front.png");
-}
-.span_bg_wall_left{
-    top: 18px;
-    width: 4px;
-    height: 65px;
-    background: url("../img/bg-wall-left.png") repeat-y;
-}
-.span_door{
-    width: 17px;
-    height: 27px;
-    top: 41px;
-    left: 55px;
-    background: url("../img/door.png");
-}
-.span_window{
-    top: 30px;
-    left: 119px;
-    width: 10px;
-    height: 17px;
-    background: url("../img/window.png");
-}
-.span_window_big{
-    display: none;
-    width: 25px;
-    height: 25px;
-    background: url("../img/window-big.png");
-}
-.span_bg_wall_right{
-    top: 18px;
-    left: 172px;
-    width: 4px;
-    height: 65px;
-    background: url("../img/bg-wall-right.png") repeat-y;
-}
-.span_bg_wall_right1{
-    left: 105px;
-}
-.span_bg_wall_right2{
-    left: 139px;
-}
-.span_bg_lining{
-    top: 57px;
-    left: 107px;
-    width: 66px;
-    height: 11px;
-    background: url("../img/bg-lining.png");
-}
-.span_bg_brick{
-    top: 68px;
-    width: 161px;
-    height: 15px;
-    background: url("../img/bg-brick.png");
-    border-top: 2px solid #695B5B;
-    border-bottom: 2px solid #695B5B;
-}
+    .span_funnel{
+        width: 7px;
+        height: 5px;
+        left: 92px;
+        top: -4px;
+        background: url("../img/funnel.png");
+    }
+    .span_roof_xsmall{
+        width: 161px;
+        height: 17px;
+        background: url("../img/roof-xsmall.png");
+    }
+    .span_bg_roof_border{
+        height: 4px;
+        top: 17px;
+        width: 161px;
+        background: url("../img/bg-roof-border.png") repeat-x;
+    }
+    .span_balcony_front{
+        display: none;
+        width: 35px;
+        height: 25px;
+        background: url("../img/balcony-front.png");
+    }
+    .span_bg_wall_left{
+        top: 18px;
+        width: 4px;
+        height: 65px;
+        background: url("../img/bg-wall-left.png") repeat-y;
+    }
+    .span_door{
+        width: 17px;
+        height: 27px;
+        top: 41px;
+        left: 55px;
+        background: url("../img/door.png");
+    }
+    .span_window{
+        top: 45%;
+        left: 119px;
+        width: 10px;
+        height: 17px;
+        background: url("../img/window.png");
+    }
+    .span_window_big{
+        display: none;
+        width: 25px;
+        height: 25px;
+        background: url("../img/window-big.png");
+    }
+    .span_bg_wall_right{
+        top: 18px;
+        left: 172px;
+        width: 4px;
+        height: 65px;
+        background: url("../img/bg-wall-right.png") repeat-y;
+    }
+    .span_bg_wall_right1{
+        left: 105px;
+    }
+    .span_bg_wall_right2{
+        left: 139px;
+    }
+    .span_bg_lining{
+        top: 57px;
+        left: 107px;
+        width: 66px;
+        height: 11px;
+        background: url("../img/bg-lining.png");
+    }
+    .span_bg_brick{
+        top: 68px;
+        width: 161px;
+        height: 15px;
+        background: url("../img/bg-brick.png");
+        border-top: 2px solid #695B5B;
+        border-bottom: 2px solid #695B5B;
+    }

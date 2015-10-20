@@ -47,6 +47,19 @@ app.controller("step2Ctrl",function($scope){
         for(var i=0; i < $scope.sliderData.length;i++){
                 $scope.demoVals.push($scope.sliderData[i].value);
     };
+    $scope.span_funnel = 'span_funnel';
+    $scope.span_roof_xsmall = 'span_roof_xsmall';
+    $scope.span_bg_roof_border = 'span_bg_roof_border';
+    $scope.span_balcony_front = 'span_balcony_front';
+    $scope.span_bg_wall_left = 'span_bg_wall_left';
+    $scope.span_door = 'span_door';
+    $scope.span_window = 'span_window';
+    $scope.span_window_big = 'span_window_big';
+    $scope.span_bg_wall_right = 'span_bg_wall_right';
+    $scope.span_bg_wall_right1 = 'span_bg_wall_right1';
+    $scope.span_bg_wall_right2 = 'span_bg_wall_right2';
+    $scope.span_bg_lining = 'span_bg_lining';
+    $scope.span_bg_brick = 'span_bg_brick';
 });
 
 
