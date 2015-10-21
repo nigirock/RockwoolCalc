@@ -60,6 +60,8 @@ app.controller("step2Ctrl",function($scope){
     $scope.span_bg_wall_right2 = 'span_bg_wall_right2';
     $scope.span_bg_lining = 'span_bg_lining';
     $scope.span_bg_brick = 'span_bg_brick';
+    $scope.span_floor = 'span_floor';
+    $scope.floor = 'floor';
 });
 
 

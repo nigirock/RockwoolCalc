@@ -86,11 +86,20 @@
         height: 17px;
         background: url("../img/window.png");
     }
-    .span_window_big{
+    .floor{
         display: none;
+    }
+    .span_floor{
+        border-bottom: 2px solid #695B5B;
+        width: 160px;
+        top: 50%;
+    }
+    .span_window_big{
         width: 25px;
         height: 25px;
         background: url("../img/window-big.png");
+        top: 32px;
+        left: 50px;
     }
     .span_bg_wall_right{
         top: 18px;

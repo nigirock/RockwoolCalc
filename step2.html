@@ -34,17 +34,19 @@
             <span ng-class="span_roof_xsmall"></span>
             <span ng-class="span_bg_roof_border"></span>
             <span ng-class="span_balcony_front"></span>
-            <span ng-class="span_bg_wall_left" ng-style="{height : (demoVals[0] * 20) +5+ 'px'}"></span>
+            <span ng-class="span_bg_wall_left" ng-style="{height : (demoVals[0] * 20) +5+ 'px',height : (demoVals[1] * 60) +5+ 'px'}"></span>
             <span ng-class="span_door" ng-style="{top:(demoVals[0] * 20) -19+ 'px'}"></span>
             <span ng-class="span_window"></span>
-            <span ng-class="span_window_big"></span>
+            <div  ng-class="floor" ng-style="{display:demoVals[1]>1 ? 'block' : 'none'}">
+                <span ng-class="span_floor"></span>
+                <span ng-class="span_window_big"></span>
+            </div>
             <span ng-class="span_bg_wall_right" ng-style="{height : (demoVals[0] * 20) +5+ 'px'}"></span>
             <span ng-class="[span_bg_wall_right , span_bg_wall_right1]" ng-style="{height : (demoVals[0] * 20) +5+ 'px'}"></span>
             <span ng-class="[span_bg_wall_right , span_bg_wall_right2]" ng-style="{height : (demoVals[0] * 20) +5+ 'px'}"></span>
             <span ng-class="span_bg_lining" ng-style="{top:(demoVals[0] * 20) -3+ 'px'}"></span>
-            <span ng-class="span_bg_brick" ng-style="{top:(demoVals[0] * 20) +8+ 'px'}"></span>
+            <span ng-class="span_bg_brick" ng-style="{top:(demoVals[0] * 20) +8+ 'px',top:(demoVals[1] * 60)+8+ 'px'}"></span>
         </div>
-
     </div>
 
 </div>
